@@ -136,7 +136,7 @@ namespace HumanityRoadParser
                 {
                     agencyType = worksheet.Cells[row, 1].GetValue<string>();
 
-                    for (int i = 2; i < worksheet.Dimension.End.Column; i++)
+                    for (int i = 2; i <= worksheet.Dimension.End.Column; i++)
                     {
                         var columnName = worksheet.Cells[row, i].GetValue<string>();
                         if (!string.IsNullOrEmpty(columnName))
